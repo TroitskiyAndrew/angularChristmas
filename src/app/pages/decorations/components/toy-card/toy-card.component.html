@@ -1,0 +1,34 @@
+<div class="card" [ngClass]="{favorite: faivorite}" (click)="toggleFaivorite()"
+  [ngStyle]="{'border-color': faivorite ? faivoriteBorder : 'transparent'}">
+  <div class="card__item card__title">
+    <span class="value" [textContent]="toy.name"></span>
+  </div>
+  <div class="card__item card__img">
+    <!-- Почему тут нельзя делать интерполяцию? И почему нельзя заранее определить path на классе? -->
+    <img class="img" [src]="'../../../../../assets/toys/' + toy.num + '.png'">
+  </div>
+  <div class="card__item">
+    <span class="caption">Количество:</span>
+    <span class="value" [textContent]="toy.count"></span>
+  </div>
+  <div class="card__item">
+    <span class="caption">Год покупки:</span>
+    <span class="value" [textContent]="toy.year"></span>
+  </div>
+  <div class="card__item">
+    <span class="caption">Форма:</span>
+    <span class="value" [textContent]="toy.shape"></span>
+  </div>
+  <div class="card__item">
+    <span class="caption">Цвет:</span>
+    <span class="value" [textContent]="toy.color"></span>
+  </div>
+  <div class="card__item">
+    <span class="caption">Размер:</span>
+    <span class="value" [textContent]="toy.size"></span>
+  </div>
+  <div class="card__item">
+    <span class="caption">Любимая:</span>
+    <span class="value" [textContent]="toy.favorite ? 'да' : 'нет'"></span>
+  </div>
+</div>

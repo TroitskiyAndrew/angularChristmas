@@ -1,0 +1,17 @@
+@import "../../../../../styles/abstracts/mixins";
+
+:host {
+  position: relative;
+  padding: 0 30px;
+  @include flex($ai: flex-start, $cg: 10px, $rg: 10px);
+  flex-wrap: wrap;
+  overflow-y: auto;
+  min-height: 70vh;
+
+  .notif {
+    @include position;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+  }
+}

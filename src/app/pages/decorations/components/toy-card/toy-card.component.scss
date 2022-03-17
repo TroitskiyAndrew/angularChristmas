@@ -1,0 +1,50 @@
+@import "../../../../../styles/abstracts/mixins";
+// ToDo-0 Почему не работает?
+// @import "mixins";
+
+.card {
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
+  color: white;
+  background-color: cadetblue;
+  font-size: 0.9rem;
+  cursor: pointer;
+
+  &__item {
+    @include flex($jc: flex-start);
+    gap: 3px;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+  }
+  &__img {
+    @include flex;
+    margin: 10px 0;
+    .img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &.favorite {
+    position: relative;
+    &::after {
+      @include position($left: 85%, $top: 85%);
+      @include flex;
+      content: "\f005";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 2rem;
+      color: gold;
+    }
+  }
+
+  &._hidden {
+    display: none;
+  }
+}

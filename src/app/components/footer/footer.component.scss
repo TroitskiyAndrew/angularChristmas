@@ -1,0 +1,13 @@
+:host {
+  width: 100%;
+  margin-top: auto;
+  background-color: black;
+  color: white;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
