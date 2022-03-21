@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from 'src/data/data.service';
 
 @Component({
   selector: 'app-controls',
@@ -8,13 +9,15 @@ import { Router } from '@angular/router';
 })
 export class ControlsComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  public search2: string = 'test';
+
+  constructor(private router: Router, private dataService: DataService) { }
 
   ngOnInit(): void {
   }
 
   handleSearch(value: string): void {
-    console.log(value);
+    this.dataService.searh(value);
   }
 
   goHome(): void {

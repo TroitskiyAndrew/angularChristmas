@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeModule } from './pages/home/home.module';
 import { DecorationsModule } from './pages/decorations/decorations.module';
 import { FormsModule } from '@angular/forms';
+import { DataService } from 'src/data/data.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { FormsModule } from '@angular/forms';
     DecorationsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

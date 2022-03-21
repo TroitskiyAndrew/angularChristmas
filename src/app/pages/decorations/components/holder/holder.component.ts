@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// ToDo-0 Почему-то не получается подтянуть из json
-import data from '../../../../../data/data';
+import { DataService } from 'src/data/data.service';
+import data from '../../../../../data/toysData.json';
 import { DataArr } from '../../../../../data/dataTypes';
 
 @Component({
@@ -12,7 +12,7 @@ export class HolderComponent implements OnInit {
 
   public data: DataArr = data;
 
-  constructor() { }
+  constructor(public dataService: DataService) { }
 
   ngOnInit(): void {
 

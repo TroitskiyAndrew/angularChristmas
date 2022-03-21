@@ -1,8 +1,6 @@
-@import "../../../../../styles/abstracts/mixins";
-// ToDo-0 Почему не работает?
-// @import "mixins";
+@import "mixins";
 
-.card {
+:host {
   width: 300px;
   padding: 20px;
   border-radius: 10px;
@@ -13,21 +11,22 @@
   background-color: cadetblue;
   font-size: 0.9rem;
   cursor: pointer;
+  .card {
+    &__item {
+      @include flex($jc: flex-start);
+      gap: 3px;
+    }
 
-  &__item {
-    @include flex($jc: flex-start);
-    gap: 3px;
-  }
-
-  &__title {
-    font-size: 1.1rem;
-  }
-  &__img {
-    @include flex;
-    margin: 10px 0;
-    .img {
-      width: 100px;
-      height: 100px;
+    &__title {
+      font-size: 1.1rem;
+    }
+    &__img {
+      @include flex;
+      margin: 10px 0;
+      .img {
+        width: 100px;
+        height: 100px;
+      }
     }
   }
 

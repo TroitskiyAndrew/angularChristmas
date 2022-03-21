@@ -6,6 +6,7 @@ import { HolderComponent } from './components/holder/holder.component';
 import { ToyCardComponent } from './components/toy-card/toy-card.component';
 import { InputNameComponent } from './components/controls/input-name/input-name.component';
 import { FormsModule } from '@angular/forms';
+import { InputModule } from 'src/app/ui/input/input.module';
 
 
 
@@ -13,7 +14,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [DecorationsComponent, ControlsComponent, HolderComponent, ToyCardComponent, InputNameComponent],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    InputModule
   ]
 })
 export class DecorationsModule { }
